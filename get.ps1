@@ -33,15 +33,17 @@ do {
             "Office installation started..."
         }
         '3' {
-            Start-Job -ScriptBlock {
-                $list_url = "https://raw.githubusercontent.com/shinishiho/pc/main/apps_win.txt"
-                $apps = (Invoke-WebRequest -Uri $list_url).Content -join " "
-                winget --accept-package-agreements --accept-source-agreements --silent install $apps
+            $ScriptBlock = {
+                $apps = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/shinishiho/pc/main/apps_win.txt").Content
+                foreach ($app in (-split $apps)) {
+                    winget install --accept-package-agreements --accept-source-agreements --silent $app
+                }
                 Start-Process "thorium.exe" "https://idrive.com/online-backup-download"
                 Start-Process "thorium.exe" "https://repack.me"
                 Start-Process "thorium.exe" "https://sideloadly.io/#download"
             }
             "Apps installation started..."
+            Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command $($ScriptBlock | Out-String)" -Verb RunAs            
         }
         '4' {
             Start-Job -ScriptBlock {
