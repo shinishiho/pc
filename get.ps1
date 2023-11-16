@@ -35,7 +35,7 @@ do {
         '3' {
             Start-Job -ScriptBlock {
                 Start-Sleep -Seconds 15
-                $list_url = "https://example.com/path/to/remotefile.txt"
+                $list_url = "https://raw.githubusercontent.com/shinishiho/pc/main/apps_win.txt"
                 $apps = (Invoke-WebRequest -Uri $list_url).Content -join " "
                 winget --accept-package-agreements --accept-source-agreements --silent install $apps
                 Start-Process "thorium.exe" "https://idrive.com/online-backup-download"
