@@ -30,15 +30,14 @@ You can fork my repository, check out the data and config folder and make your o
   1. Clone the repo (you should fork this repo and clone yours):
 
      ```powershell
-     git clone https://github.com/shinishiho/pc -b win win
+     git clone https://github.com/shinishiho/pc.git -b win win
      cd win\scripts
      .\run.ps1
      ```
 
   2. Follow on-screen instructions.
 
-* For someone with a custom domain name
-You can set your DNS setting to the raw link of [this](./scripts/get.ps1), and then invoke this script using a fancy command (replace with your own domain):
+* For someone with a custom domain name, you can set your DNS setting to the raw link of [this file](./scripts/get.ps1), and then invoke this script using a fancy command (replace with your own domain):
 
    ```powershell
    iex(irm win.shinishiho.cyou)

@@ -1,4 +1,6 @@
-Invoke-Expression "& { $(Invoke-RestMethod https://aka.ms/install-powershell.ps1) } -UseMSI"
+if (-not (Test-Path (Get-Command pwsh -ErrorAction SilentlyContinue))) {
+    Invoke-Expression "& { $(Invoke-RestMethod https://aka.ms/install-powershell.ps1) } -UseMSI"
+}
 $repo = "shinishiho/pc"
 $branch = "win"
 
