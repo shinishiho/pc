@@ -1,0 +1,6 @@
+[
+    {
+        "path": "Microsoft.PowerShell_profile.ps1",
+        "destination": "~\\Documents\\PowerShell\\"
+    }
+]

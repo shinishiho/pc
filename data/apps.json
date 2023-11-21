@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Git",
+        "winget_id": "Git.Git"
+    },
+    {
+        "name": "Discord",
+        "winget_id": "Discord.Discord"
+    },
+    {
+        "name": "Powershell",
+        "winget_id": "Microsoft.PowerShell"
+    },
+    {
+        "name": "7zip",
+        "winget_id": "7zip.7zip"
+    },
+    {
+        "name": "Thorium",
+        "winget_id": "Alex313031.Thorium"
+    },
+    {
+        "name": "Microsoft.VCRedist.2015+.x86",
+        "winget_id": "Microsoft.VCRedist.2015+.x86"
+    },
+    {
+        "name": "Microsoft.VCRedist.2015+.x64",
+        "winget_id": "Microsoft.VCRedist.2015+.x64"
+    },
+    {
+        "name": "Microsoft.VCRedist.2012.x86",
+        "winget_id": "Microsoft.VCRedist.2012.x86"
+    },
+    {
+        "name": "Microsoft.VCRedist.2012.x64",
+        "winget_id": "Microsoft.VCRedist.2012.x64"
+    },
+    {
+        "name": "Microsoft.VCRedist.2010.x86",
+        "winget_id": "Microsoft.VCRedist.2010.x86"
+    },
+    {
+        "name": "Microsoft.VCRedist.2010.x64",
+        "winget_id": "Microsoft.VCRedist.2010.x64"
+    },
+    {
+        "name": "Microsoft.VCRedist.2008.x86",
+        "winget_id": "Microsoft.VCRedist.2008.x86"
+    },
+    {
+        "name": "Microsoft.VCRedist.2008.x64",
+        "winget_id": "Microsoft.VCRedist.2008.x64"
+    },
+    {
+        "name": "Microsoft.VCRedist.2005.x86",
+        "winget_id": "Microsoft.VCRedist.2005.x86"
+    },
+    {
+        "name": "Microsoft.VCRedist.2005.x64",
+        "winget_id": "Microsoft.VCRedist.2005.x64"
+    },
+    {
+        "name": "Parsec",
+        "winget_id": "Parsec.Parsec"
+    },
+    {
+        "name": "Python 3.12",
+        "winget_id": "Python.Python.3.12"
+    },
+    {
+        "name": "Snipping Tool",
+        "winget_id": "Snipping Tool"
+    },
+    {
+        "name": "Unigram",
+        "winget_id": "Unigram"
+    },
+    {
+        "name": "VSCodium",
+        "winget_id": "VSCodium.VSCodium"
+    },
+    {
+        "name": "WireGuard",
+        "winget_id": "WireGuard.WireGuard"
+    },
+    {
+        "name": "Neovim Nightly",
+        "winget_id": "Neovim.Neovim.Nightly"
+    },
+    {
+        "name": "Microsoft PowerToys",
+        "winget_id": "Microsoft.PowerToys"
+    },
+    {
+        "name": "Gsudo",
+        "winget_id": "gerardog.gsudo"
+    }
+]
