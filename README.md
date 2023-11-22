@@ -8,9 +8,9 @@ For some reasons, I am never satisfied with one OS or another. Someday I wake up
 
 Then it broke. I go back to Windows, again, but it no longer feels like home.
 
-In linux, there is some kind of `dotfiles` that people can define an store all of their preferences for their machines, which is my goal for this repository.
+The goal of this repo is to make a `dotfiles` equivalent for every OS I use. I am dual booting Arch and Windows on my poor laptop, and I have a Mac Mini at home. Ultimately I will be able to sync my preferences across all of my devices.
 
-I do not own any tools available in this repository. This is just my collection of other's great works. You can find a list of them [here.](#tools-used) Please refer to the guides for each one.
+This repo contains tools from various people on GitHub that made my live easier. You can find a list of them [here.](#tools-used) Please refer to the guides of each one for more information.
 
 ## Features
 
@@ -24,9 +24,10 @@ I do not own any tools available in this repository. This is just my collection 
 
 ## Usage
 
-You can fork my repository, check out the data and config folder and make your own customization.
+You can fork my repository, check out the data and config folder and [make your own customization](#customization).
 
 * How to use
+
   1. Clone the repo (you should fork this repo and clone yours):
 
      ```powershell
@@ -36,12 +37,26 @@ You can fork my repository, check out the data and config folder and make your o
      ```
 
   2. Follow on-screen instructions.
+  3. Enjoy your beloved home. (It is recommended to restart your computer after the script finishes)
 
-* For someone with a custom domain name, you can set your DNS setting to the raw link of [this file](./scripts/get.ps1), and then invoke this script using a fancy command (replace with your own domain):
+* For someone with a custom domain name, you can set your DNS setting to the raw link of [this file](./scripts/get.ps1), and then invoke this script using a fancy, short command (replace with your own domain):
 
    ```powershell
    iex(irm win.shinishiho.cyou)
    ```
+
+## Customization
+
+Here are what you can change according to your needs:
+
+   1. Config folder: You can throw whatever config for the apps you use there. Then tell the script where those config files belong to by editing [this file.](./data/config_paths.json)
+   2. Data folder: We currently have
+      * [fonts](./data/fonts): You can put your favorite fonts here and they will be installed.
+      * [themes](./data/themes): Theming for Windows (basic theming, no external software required). You can save your wallpapers, cursors, system icons, color schemes here.
+      * [apps](./data/apps.json): A list of apps to be installed using winget.
+   3. Scripts: 
+      * [get.ps1](./scripts/get.ps1): Edit your repo link here.
+      * [run.ps1](./scripts/run.ps1): Personalize the banner to your name, ~~or you can just throw it away~~.
 
 ## Tools used
 

@@ -1,8 +1,11 @@
 if (-not (Get-Command pwsh -ErrorAction SilentlyContinue)) {
     Invoke-Expression "& { $(Invoke-RestMethod https://aka.ms/install-powershell.ps1) } -UseMSI"
 }
+
+# CHANGEME
 $repo = "shinishiho/pc"
 $branch = "win"
+# CHANGEME
 
 if (Test-Path (Get-Command git -ErrorAction SilentlyContinue)) {
     git clone --single-branch --branch $branch "https://github.com/$repo.git"
