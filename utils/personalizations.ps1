@@ -16,14 +16,22 @@ public class PInvoke {
 }
 "@
 
-    $bg = "..\data\themes\bg"
-    $cursor = "..\data\themes\cursor"
-    $cursorFiles = Get-ChildItem -LiteralPath $cursor -Include "*.ani", "*.cur" -Recurse
-    foreach ($cursorFile in $cursorFiles) {
+    $themeFolder = "..\data\themes"
+    $themeFile = Get-ChildItem -LiteralPath "$themeFolder" -Filter "*.theme"
+    New-Item -ItemType Directory -Force -Path "$env:windir\Resources\Web\Wallpaper\$($themeFile.BaseName)"
+
+    $wallpapers = Get-ChildItem -LiteralPath "$themeFolder\wallpaper" -Filter "*.jpg", "*.jpeg", "*.png"
+    foreach ($wallpaper in $wallpapers) {
+        Copy-Item -LiteralPath $wallpaper.FullName -Destination "$env:windir\Resources\Web\Wallpaper\$($themeFile.BaseName)" -Force
+    }
+    Invoke-Item -LiteralPath $themeFile.FullName
+
+    $cursors = Get-ChildItem -LiteralPath "$themeFolder\cursor" -Include "*.ani", "*.cur" -Recurse
+    foreach ($cursor in $cursors) {
         Copy-Item -LiteralPath $cursorFile.FullName -Destination "$env:windir\Cursors" -Force
     }
 
-    $regFile = Get-ChildItem -LiteralPath $cursor -Filter "*.reg"
+    $regFile = Get-ChildItem -LiteralPath "$themeFolder\cursor" -Filter "*.reg"
     if ($regFile) {
         Start-Process -FilePath "regedit.exe" -ArgumentList "/s `"$($regFile.FullName)`"" -Wait
     }

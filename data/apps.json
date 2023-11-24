@@ -94,5 +94,9 @@
     {
         "name": "Gsudo",
         "winget_id": "gerardog.gsudo"
+    },
+    {
+        "name": "Notion Enhanced",
+        "winget_id": "NotionRepackaged.NotionEnhanced"
     }
 ]

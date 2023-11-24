@@ -50,11 +50,11 @@ You can fork my repository, check out the data and config folder and [make your 
 Here are what you can change according to your needs:
 
    1. Config folder: You can throw whatever config for the apps you use there. Then tell the script where those config files belong to by editing [this file.](./data/config_paths.json)
-   2. Data folder: We currently have
+   2. Data folder:
       * [fonts](./data/fonts): You can put your favorite fonts here and they will be installed.
-      * [themes](./data/themes): Theming for Windows (basic theming, no external software required). You can save your wallpapers, cursors, system icons, color schemes here.
+      * [themes](./data/themes): Theming for Windows (wallpaper, accent color, cursor etc). Prefer external theming software? Don't care about this folder then.
       * [apps](./data/apps.json): A list of apps to be installed using winget.
-   3. Scripts: 
+   3. Scripts:
       * [get.ps1](./scripts/get.ps1): Edit your repo link here.
       * [run.ps1](./scripts/run.ps1): Personalize the banner to your name, ~~or you can just throw it away~~.
 

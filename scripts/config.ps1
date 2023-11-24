@@ -27,7 +27,7 @@ $option1 = $option1.PadRight($columnWidth)
 $option3 = $option3.PadRight($columnWidth)
 Write-Host $option1 -ForegroundColor Cyan -NoNewline
 Write-Host $option2 -ForegroundColor Cyan
-Write-Host $option3 -ForegroundColor Cyan -NoNewline
+Write-Host $option3 -ForegroundColor Cyan
 
 $selection = $Host.UI.RawUI.ReadKey("NoEcho, IncludeKeyDown").Character - 48
 switch ($selection) {
